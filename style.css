@@ -17,13 +17,21 @@ body {
     display: grid;
     place-items: center;
     color: var(--gray);
+    background-image: url(./images/desktop-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-color: var(--black-bg);
 }
 
 main {
     background-image: url(./images/background.svg);
-    width: 100%;
-    max-width: 375px;
+    /** no-repeat center/cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vw;
     min-height: 812px;
 }
 
@@ -87,3 +95,14 @@ ul {
     padding: 0;
     gap: .5rem;
 }
+
+@media (min-width: 720px) {
+    main {
+        background-image: url(./images/background.svg);
+        width: 100%;
+        max-width: 375px;
+        max-height: 812px;
+    }
+}
+
+/* @media (min-width: 960px) {} */
