@@ -21,22 +21,50 @@
                 </span>
                 <img src="images/icon-kierico.png" alt="Foto pessoal">
             </div>
-            <h1>Kiérico Souza</h1>
+            <h1 id="userName">Kiérico Souza</h1>
             <a href="https://github.com/Kierico" target="_blank">
                 <img src="images/github.svg" alt="Logo github">
                 Kierico
             </a>
             <p>Olá, tenho 37 anos, sou estudante do curso de Ciência da Computação e estudo para me tornar um
                 full-stack.</p>
-            <ul>
-                <li><a href="https://www.youtube.com/kiericograndao" target="_blank"><img src="images/youtube.svg"
-                            alt="Logo do Youtube"></a></li>
-                <li><a href="" target="_blank"><img src="images/facebook.svg" alt=""></a></li>
-                <li><a href="" target="_blank"><img src="images/instagram.svg" alt=""></a></li>
-                <li><a href="" target="_blank"><img src="images/twitter.svg" alt=""></a></li>
+            <ul id="socialLinks">
+                <li class="youtube"><a href="" target="_blank"><img src="images/youtube.svg" alt="Logo do Youtube"></a>
+                </li>
+                <li class="facebook"><a href="" target="_blank"><img src="images/facebook.svg" alt=""></a></li>
+                <li class="instagram"><a href="" target="_blank"><img src="images/instagram.svg" alt=""></a></li>
+                <li class="twitter"><a href="" target="_blank"><img src="images/twitter.svg" alt=""></a></li>
             </ul>
         </div>
     </main>
+
+    <script>
+        const linksSocialMedia = {
+            youtube: "kiericograndao",
+            facebook: "lojaprincesalu",
+            instagram: "princesalu.loja"
+        }
+
+        function changeTitle() {
+            // document.getElementById("userName").textContent = "Souza";
+
+            /** A tag com "id", não precisa de "document.getElementById("userName")", é só chamar o nome do "id" direto. */
+            // userName.textContent = "Souza";
+        }
+
+        function changelinksSocialMedia() {
+            /** for (let i = 0; i <= 10; i++) { */
+            for (let li of socialLinks.children) {
+                const social = li.getAttribute("class");
+                li.children[0].href = `https://www.${social}.com/${linksSocialMedia[social]}`;
+                // alert();
+            }
+        }
+
+        // changeTitle();
+        changelinksSocialMedia();
+    </script>
+
 </body>
 
 </html>
