@@ -14,4 +14,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-**[Meu Projeto](kierico.github.io/nlworigin/)**
+**[Meu Projeto](https://kierico.github.io/nlworigin/)**
