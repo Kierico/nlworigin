@@ -19,14 +19,15 @@
                 <span>
                     <img src="images/selo.svg" alt="Selo Rocketseat">
                 </span>
-                <img src="images/icon-kierico.png" alt="Foto pessoal">
+                <img id="userAvatar" src="images/icon-kierico.png" alt="Foto pessoal">
             </div>
             <h1 id="userName">Kiérico Souza</h1>
-            <a href="https://github.com/Kierico" target="_blank">
+            <a id="userLink" href="https://github.com/Kierico" target="_blank">
                 <img src="images/github.svg" alt="Logo github">
-                Kierico
+                <span id="userLogin">Kierico</span>
             </a>
-            <p>Olá, tenho 37 anos, sou estudante do curso de Ciência da Computação e estudo para me tornar um
+            <p id="userBio">Olá, tenho 37 anos, sou estudante do curso de Ciência da Computação e estudo para me tornar
+                um
                 full-stack.</p>
             <ul id="socialLinks">
                 <li class="youtube"><a href="" target="_blank"><img src="images/youtube.svg" alt="Logo do Youtube"></a>
@@ -38,32 +39,7 @@
         </div>
     </main>
 
-    <script>
-        const linksSocialMedia = {
-            youtube: "kiericograndao",
-            facebook: "lojaprincesalu",
-            instagram: "princesalu.loja"
-        }
-
-        function changeTitle() {
-            // document.getElementById("userName").textContent = "Souza";
-
-            /** A tag com "id", não precisa de "document.getElementById("userName")", é só chamar o nome do "id" direto. */
-            // userName.textContent = "Souza";
-        }
-
-        function changelinksSocialMedia() {
-            /** for (let i = 0; i <= 10; i++) { */
-            for (let li of socialLinks.children) {
-                const social = li.getAttribute("class");
-                li.children[0].href = `https://www.${social}.com/${linksSocialMedia[social]}`;
-                // alert();
-            }
-        }
-
-        // changeTitle();
-        changelinksSocialMedia();
-    </script>
+    <script src="./main.js"></script>
 
 </body>
 
